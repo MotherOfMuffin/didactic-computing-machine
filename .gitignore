@@ -1,0 +1,38 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules/
+dist/
+out/
+
+# Optional npm cache directory
+.npm
+
+# Output of the `npm pack` command
+*.tgz
+
+# dotenv environment variables file
+.env
+.env.local
+.env.*.local
+
+# IDE settings
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+*.vsix
