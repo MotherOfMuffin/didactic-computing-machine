@@ -1,0 +1,67 @@
+{
+  "name": "super-cool-copilot-extension",
+  "displayName": "Super Cool Copilot Extension",
+  "description": "A VS Code extension with GitHub Copilot integration featuring chat, code completions, and custom commands",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "AI",
+    "Copilot"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "superCoolCopilot.openChat",
+        "title": "Open Copilot Chat",
+        "category": "Super Cool Copilot"
+      },
+      {
+        "command": "superCoolCopilot.generateCode",
+        "title": "Generate Code with Copilot",
+        "category": "Super Cool Copilot"
+      },
+      {
+        "command": "superCoolCopilot.explainCode",
+        "title": "Explain Selected Code",
+        "category": "Super Cool Copilot"
+      },
+      {
+        "command": "superCoolCopilot.fixBug",
+        "title": "Fix Bug with Copilot",
+        "category": "Super Cool Copilot"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "superCoolCopilot.openChat",
+        "key": "ctrl+shift+i",
+        "mac": "cmd+shift+i"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "webpack --mode production",
+    "webpack": "webpack --mode development",
+    "webpack-dev": "webpack --mode development --watch",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.88.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.0",
+    "ts-loader": "^9.5.0"
+  },
+  "dependencies": {}
+}
